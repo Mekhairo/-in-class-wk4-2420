@@ -8,12 +8,12 @@ ls file?.* - result = file1.txt, file2.txt, fileA.txt
 
 1.2 - 
 '''
-ls file*.txt - matches zero or more digits 
+ls file[0-9].txt
 '''
 
 2.1 -
 '''
-cut -d ',' -f 2, 3 | 
+grep -E " ,3[0-9]" dc.csv | cut -d',' -f1,2
 
 2.2 - 
 '''
